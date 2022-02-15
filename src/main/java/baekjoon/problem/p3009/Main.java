@@ -45,7 +45,8 @@ public class Main {
 }
 
 /**
- * 알고리즘 풀이 구조 클래스
+ * 알고리즘 풀이 구조 클래스<p>
+ * 백준에 제출하기 위해 해당 클래스 Main 클래스로 가져가서 사용합니다.
  *
  * @author extreme code
  */

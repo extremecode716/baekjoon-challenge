@@ -17,9 +17,22 @@ class Algorithm {
         void solve();
     }
 
+    private static BufferedReader buffer;
+
+    public static int getLineCount() {
+        buffer = new BufferedReader(new InputStreamReader(System.in));
+        int lineCount = 1;
+        try {
+            lineCount = Integer.parseInt(buffer.readLine());
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return lineCount;
+    }
+
     public static List<String> getInputs(final int lineCount) {
         List<String> lines = new ArrayList<>();
-        try (BufferedReader buffer = new BufferedReader(new InputStreamReader(System.in))) {
+        try {
             int count = 0;
             String line;
             while ((line = buffer.readLine()) != null) {
@@ -28,6 +41,7 @@ class Algorithm {
                 if (count == lineCount)
                     break;
             }
+            buffer.close();
         } catch (Exception e) {
             e.printStackTrace();
         }

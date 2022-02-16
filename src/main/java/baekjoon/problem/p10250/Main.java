@@ -1,6 +1,7 @@
 package baekjoon.problem.p10250;
 
 import java.io.BufferedReader;
+import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.List;
@@ -18,7 +19,7 @@ public class Main {
     }
 
     private static void solution() {
-        final List<String> inputs = Algorithm.getInputs(Algorithm.getLineCount());
+        final List<String> inputs = Algorithm.readLines(Integer.parseInt(Algorithm.readLine()));
         final StringJoiner output = new StringJoiner("\n");
         for (String input : inputs) {
             String[] split = input.split("\\s+");
@@ -45,8 +46,7 @@ public class Main {
 }
 
 /**
- * 알고리즘 풀이 구조 클래스<p>
- * 백준에 제출하기 위해 해당 클래스 Main 클래스로 가져가서 사용합니다.
+ * 백준에 제출하기 위해 문제의 Main 클래스로 복사 이동하여 사용됩니다.
  *
  * @author extreme code
  */
@@ -56,38 +56,51 @@ class Algorithm {
         void solve();
     }
 
-    private static BufferedReader buffer;
+    private static BufferedReader bufferedReader;
 
-    public static int getLineCount() {
-        buffer = new BufferedReader(new InputStreamReader(System.in));
-        int lineCount = 1;
+    public static String readLine() {
+        bufferedReader = bufferedReader == null ? new BufferedReader(new InputStreamReader(System.in)) : bufferedReader;
+        String line = null;
         try {
-            lineCount = Integer.parseInt(buffer.readLine());
+            line = bufferedReader.readLine();
         } catch (Exception e) {
             e.printStackTrace();
         }
-        return lineCount;
+        return line;
     }
 
-    public static List<String> getInputs(final int lineCount) {
+    public static List<String> readLines(final int readCount) {
+        bufferedReader = bufferedReader == null ? new BufferedReader(new InputStreamReader(System.in)) : bufferedReader;
         List<String> lines = new ArrayList<>();
         try {
             int count = 0;
             String line;
-            while ((line = buffer.readLine()) != null) {
+            while ((line = bufferedReader.readLine()) != null) {
                 lines.add(line);
                 ++count;
-                if (count == lineCount)
+                if (count == readCount)
                     break;
             }
-            buffer.close();
         } catch (Exception e) {
             e.printStackTrace();
         }
         return lines;
     }
 
+    public static void close() {
+        if (null == bufferedReader)
+            return;
+        try {
+            bufferedReader.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        } finally {
+            bufferedReader = null;
+        }
+    }
+
     public static void solve(Solution solution) {
         solution.solve();
+        close();
     }
 }

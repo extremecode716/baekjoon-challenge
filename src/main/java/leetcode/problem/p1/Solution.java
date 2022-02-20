@@ -1,6 +1,8 @@
 package leetcode.problem.p1;
 
 import java.util.Arrays;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Objects;
 
 /**
@@ -11,6 +13,18 @@ import java.util.Objects;
  */
 public class Solution {
     public int[] twoSum(int[] nums, int target) {
+        Map<Integer, Integer> map = new HashMap<>();
+
+        for (int i = 0; i < nums.length; ++i) {
+            if (map.containsKey(nums[i]))
+                return new int[]{map.get(nums[i]), i};
+            map.put(target - nums[i], i);
+        }
+
+        return new int[0];
+    }
+
+    public int[] twoSum1(int[] nums, int target) {
         int[] output = new int[]{0, 0};
         ArrayNumber[] arrayNumbers = new ArrayNumber[nums.length];
         int index = 0;

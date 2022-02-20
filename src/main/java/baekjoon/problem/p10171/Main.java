@@ -1,16 +1,15 @@
-package baekjoon.problem.p2745;
+package baekjoon.problem.p10171;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 
 /**
- * 진법 변환
+ * 고양이
  *
  * @author extreme code
- * @see <a href="https://www.acmicpc.net/problem/2745">https://www.acmicpc.net/problem/2745</a>
+ * @see <a href="https://www.acmicpc.net/problem/10171">https://www.acmicpc.net/problem/10171</a>
  */
 public class Main {
     public static void main(String[] args) {
@@ -18,27 +17,11 @@ public class Main {
     }
 
     private static void solution() {
-        final List<String> inputs = Algorithm.readLines(1);
-        final String[] split = inputs.get(0).split("\\s+");
-        final String B = split[0];
-        final int N = Integer.parseInt(split[1]);
-
-        int sum = convertBNotationToDecimal(B.charAt(B.length() - 1));
-        for (int i = B.length() - 2, power = 1; i > -1; --i, ++power) {
-            sum += Math.pow(N, power) * convertBNotationToDecimal(B.charAt(i));
-        }
-
-        System.out.println(sum);
-    }
-
-    private static int convertBNotationToDecimal(final char BCharAt) {
-        int number;
-        if (BCharAt - '9' <= 0) {
-            number = BCharAt - '0';
-        } else {
-            number = BCharAt - 'A' + 10;
-        }
-        return number;
+        String output = "\\    /\\\n" +
+                " )  ( ')\n" +
+                "(  /  )\n" +
+                " \\(__)|";
+        System.out.println(output);
     }
 }
 

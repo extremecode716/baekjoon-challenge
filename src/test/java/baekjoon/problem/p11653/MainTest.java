@@ -1,6 +1,6 @@
 package baekjoon.problem.p11653;
 
-import baekjoon.ExtremeCodeTest;
+import baekjoon.BaekjoonTest;
 import org.junit.jupiter.api.Test;
 
 /**
@@ -24,7 +24,8 @@ class MainTest {
                 "3\n" +
                 "3";
 
-        ExtremeCodeTest.MainTest(input, output, MainTest::main);
+        BaekjoonTest.MainTest(input, output, MainTest::main);
+        BaekjoonTest.printRuntime();
     }
 
     @Test
@@ -32,7 +33,8 @@ class MainTest {
         String input = "3";
         String output = "3";
 
-        ExtremeCodeTest.MainTest(input, output, MainTest::main);
+        BaekjoonTest.MainTest(input, output, MainTest::main);
+        BaekjoonTest.printRuntime();
     }
 
     @Test
@@ -41,7 +43,8 @@ class MainTest {
         String output = "2\n" +
                 "3";
 
-        ExtremeCodeTest.MainTest(input, output, MainTest::main);
+        BaekjoonTest.MainTest(input, output, MainTest::main);
+        BaekjoonTest.printRuntime();
     }
 
     @Test
@@ -49,7 +52,8 @@ class MainTest {
         String input = "2";
         String output = "2";
 
-        ExtremeCodeTest.MainTest(input, output, MainTest::main);
+        BaekjoonTest.MainTest(input, output, MainTest::main);
+        BaekjoonTest.printRuntime();
     }
 
     @Test
@@ -58,6 +62,7 @@ class MainTest {
         String output = "97\n" +
                 "103";
 
-        ExtremeCodeTest.MainTest(input, output, MainTest::main);
+        BaekjoonTest.MainTest(input, output, MainTest::main);
+        BaekjoonTest.printRuntime();
     }
 }

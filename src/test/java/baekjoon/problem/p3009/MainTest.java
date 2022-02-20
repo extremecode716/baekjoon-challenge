@@ -1,6 +1,6 @@
 package baekjoon.problem.p3009;
 
-import baekjoon.ExtremeCodeTest;
+import baekjoon.BaekjoonTest;
 import org.junit.jupiter.api.Test;
 
 /**
@@ -22,7 +22,8 @@ class MainTest {
                 "7 5";
         String output = "7 7";
 
-        ExtremeCodeTest.MainTest(input, output, MainTest::main);
+        BaekjoonTest.MainTest(input, output, MainTest::main);
+        BaekjoonTest.printRuntime();
     }
 
     @Test
@@ -32,6 +33,7 @@ class MainTest {
                 "10 20";
         String output = "30 10";
 
-        ExtremeCodeTest.MainTest(input, output, MainTest::main);
+        BaekjoonTest.MainTest(input, output, MainTest::main);
+        BaekjoonTest.printRuntime();
     }
 }

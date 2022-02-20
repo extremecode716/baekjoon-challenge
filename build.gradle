@@ -10,11 +10,27 @@ repositories {
 }
 
 dependencies {
+    compileOnly 'org.projectlombok:lombok:1.18.12'
+    annotationProcessor 'org.projectlombok:lombok:1.18.12'
+    implementation 'org.slf4j:slf4j-api:1.7.28'
+    compile 'ch.qos.logback:logback-classic:1.1.2'
+    implementation 'org.fusesource.jansi:jansi:2.4.0'
+    testCompileOnly 'org.projectlombok:lombok:1.18.12'
+    testAnnotationProcessor 'org.projectlombok:lombok:1.18.12'
     testImplementation 'org.junit.jupiter:junit-jupiter-api:5.7.0'
     testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.7.0'
     testImplementation 'org.assertj:assertj-core:3.22.0'
 }
 
 test {
-    useJUnitPlatform()
+    testLogging {
+        showExceptions = true
+        showCauses = true
+        showStackTraces = true
+        exceptionFormat = 'full'
+    }
+
+    useJUnitPlatform {
+        excludeTags 'onlyLocally' // @OnlyLocally 테스트 제외
+    }
 }

@@ -15,7 +15,7 @@
               class="ch.qos.logback.core.rolling.RollingFileAppender">
         <file>${log.dir}/error.log</file>
         <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
-            <fileNamePattern>${log.dir}/error.%d{${rolling.policy.file.name.pattern}}.%i.log.zip</fileNamePattern>
+            <fileNamePattern>${log.dir}/error/error.%d{${rolling.policy.file.name.pattern}}.%i.log.zip</fileNamePattern>
             <timeBasedFileNamingAndTriggeringPolicy
                     class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
                 <maxFileSize>${max.file.size}</maxFileSize>
@@ -36,7 +36,7 @@
               class="ch.qos.logback.core.rolling.RollingFileAppender">
         <file>${log.dir}/warn.log</file>
         <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
-            <fileNamePattern>${log.dir}/warn.%d{${rolling.policy.file.name.pattern}}.%i.log.zip</fileNamePattern>
+            <fileNamePattern>${log.dir}/warn/warn.%d{${rolling.policy.file.name.pattern}}.%i.log.zip</fileNamePattern>
             <timeBasedFileNamingAndTriggeringPolicy
                     class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
                 <maxFileSize>${max.file.size}</maxFileSize>
@@ -57,7 +57,7 @@
               class="ch.qos.logback.core.rolling.RollingFileAppender">
         <file>${log.dir}/info.log</file>
         <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
-            <fileNamePattern>${log.dir}/info.%d{${rolling.policy.file.name.pattern}}.%i.log.zip</fileNamePattern>
+            <fileNamePattern>${log.dir}/info/info.%d{${rolling.policy.file.name.pattern}}.%i.log.zip</fileNamePattern>
             <timeBasedFileNamingAndTriggeringPolicy
                     class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
                 <maxFileSize>${max.file.size}</maxFileSize>
@@ -78,7 +78,7 @@
               class="ch.qos.logback.core.rolling.RollingFileAppender">
         <file>${log.dir}/debug.log</file>
         <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
-            <fileNamePattern>${log.dir}/debug.%d{${rolling.policy.file.name.pattern}}.%i.log.zip</fileNamePattern>
+            <fileNamePattern>${log.dir}/debug/debug.%d{${rolling.policy.file.name.pattern}}.%i.log.zip</fileNamePattern>
             <timeBasedFileNamingAndTriggeringPolicy
                     class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
                 <maxFileSize>${max.file.size}</maxFileSize>

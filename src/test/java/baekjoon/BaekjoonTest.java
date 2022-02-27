@@ -12,6 +12,7 @@ import static org.assertj.core.api.Assertions.assertThat;
  * 테스트용 클래스
  *
  * @author extreme code
+ * @see <a href="https://github.com/extremecode716/baekjoon-challenge">https://github.com/extremecode716/baekjoon-challenge</a>
  */
 @Slf4j
 public class BaekjoonTest {

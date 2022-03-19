@@ -1,4 +1,4 @@
-# 코딩 테스트 (extreme code)
+# 코딩 테스트 JAVA (author:extremecode716) 
 
 ### 코드 간단 설명
 

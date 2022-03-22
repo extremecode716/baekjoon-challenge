@@ -21,7 +21,7 @@ public class BaekjoonTest {
         void run();
     }
 
-    private static final DecimalFormat DECIMAL_FORMAT = new DecimalFormat("#.####");
+    private static final DecimalFormat DECIMAL_FORMAT = new DecimalFormat("0.####");
     private static final String lineSeparator = System.lineSeparator();
 
     private static InputStream originInputStream;
